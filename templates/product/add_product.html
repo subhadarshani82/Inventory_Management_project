@@ -13,7 +13,9 @@
         <input type="text" id="name" name="name" required><br><br>
         <label for="Category">Category : </label>
         <select name="category" id="Category">
-            <option value=""></option>
+            {% for key, value in categories %}
+            <option value="{{key}}">{{value}}</option>
+            {% endfor %}
         </select><br><br>
         <label for="price">Price : </label>
         <input type="number" id="price" name="price" required><br><br>
